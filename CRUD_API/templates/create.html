@@ -1,0 +1,11 @@
+<h3>Create User</h3>
+
+<form enctype="multipart/form-data" method="post">
+
+    {% csrf_token %}
+    <p>UserName: </p> <input type="text" name="name" id="name" value="{{ user.name }}">
+    <p>Email: </p> <input type="email" name="email" id="email" value="{{ user.email }}">
+    <p>Age: </p> <input type="number" name="age" id="age" value="{{ user.age }}">
+
+    <button type="submit">Submit</button>
+</form>
